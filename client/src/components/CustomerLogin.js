@@ -61,10 +61,10 @@ function CustomerLogin() {
 
   return(
     <div className="header">
-      <h1 className="welcome">WELCOME!</h1>
+      <h1 className="welcome">Customer Sign In</h1>
       <form onSubmit={handleSubmit}>
         <input className="fc" type="text" placeholder="Sign In" value={name} onChange={(e) => setName(e.target.value)} />
-        <button type="submit">Submit</button>
+        <button className="farm-button"type="submit">Submit</button>
       </form>
       <div className="drop-down-form" onClick={() => setShowForm(true)}>Become a new customer</div>
       {showForm && (
