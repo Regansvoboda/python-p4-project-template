@@ -4,8 +4,6 @@ import Cbutton from "./Cbutton"
 import NavBar from "./NavBar"
 import React, {useState, useEffect} from "react"
 
-
-
 function Homepage() {
 
     const [farmers, setFarmers] = useState([])
@@ -24,14 +22,12 @@ function Homepage() {
             <h1 className="welcome">WELCOME!</h1>
             <h2 className= "fc">Are you a farmer or customer?</h2>
             {farmers.map((farmer) => (
-                <div>
                 <div key={farmer.id}>
                     Name: {farmer.name}
                 <p>
                     {/* --Location: {customer.address} */}
-                    --Farm: <img className="photo" src={farmer.imgSrc}/>
+                    --Farm: <img src={farmer.imgSrc}/>
                 </p>
-                </div>
                 </div>))}
         </div>
     )

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import "./Home.css"
-import NavBar from "./NavBar"
 
 function FarmerLogin() {
   const [name, setName] = useState('');
@@ -62,7 +61,6 @@ function FarmerLogin() {
 
   return(
     <div className="header">
-      <NavBar/>
       <h1 className="welcome">WELCOME!</h1>
       <form onSubmit={handleSubmit}>
         <input className="fc" type="text" placeholder="Sign In" value={name} onChange={(e) => setName(e.target.value)} />

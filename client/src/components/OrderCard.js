@@ -1,33 +1,4 @@
-import React from 'react';
-import {Card, CardGroup, Button} from "react-bootstrap";
-import "./OrderCard.css"
-
-const CardGrid = () => {
-    return (
-        <CardGroup>
-            {Array.from({ length: 10 }).map((_, index) => (
-                    <Card className={"card-grid"} key={index}>
-                        <Card.Img className={"card-img"} variant="bottom" src={"https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg"}/>
-                        <Card.Body>
-                            <Card.Title><strong></strong></Card.Title>
-                            <Card.Text>
-                                <p></p>
-                            </Card.Text>
-                            <Button variant="primary"
-                                    href="www.google.com"
-                                    rel={"noopener noreferrer"}>
-                                
-                            </Button>
-                        </Card.Body>
-                    </Card>
-            ))}
-        </CardGroup>
-    )
-
-}
-
-export default CardGrid
-
+// import { useState } from 'react'
 
 // const Front = ({order}) => {
 //     return (
