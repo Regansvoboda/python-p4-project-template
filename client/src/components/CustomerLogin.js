@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import "./Home.css"
+import NavBar from "./NavBar"
 
 function CustomerLogin() {
   const [name, setName] = useState('');
@@ -61,6 +62,7 @@ function CustomerLogin() {
 
   return(
     <div className="header">
+      <NavBar/>
       <h1 className="welcome">WELCOME!</h1>
       <form onSubmit={handleSubmit}>
         <input className="fc" type="text" placeholder="Sign In" value={name} onChange={(e) => setName(e.target.value)} />

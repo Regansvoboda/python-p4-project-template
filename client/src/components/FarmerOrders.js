@@ -3,6 +3,9 @@ import { useLocation } from 'react-router-dom';
 import "./Farmer.css"
 import FarmerNavBar from './FarmerNavBar'
 import OrderForm from './OrderForm'
+import NavBar from './NavBar';
+import { Nav } from 'react-bootstrap';
+
 
 function FarmerOrders() {
   const [orders, setOrders] = useState([]);
@@ -38,6 +41,7 @@ function FarmerOrders() {
       <FarmerNavBar farmerName={farmerName}/>
       {farmerName ? (
         <>
+         
           <h2>Orders for {farmerName}</h2>
           {orders.map((order) => (
             <div key={order.id}>
@@ -47,7 +51,9 @@ function FarmerOrders() {
                 Card#: {order.customer.payment_method}
                 <button onClick={() => deleteOrder(order.id)}>Ship Order</button>
                 </p>
-            </div>
+            
+      
+    </div>
           ))}
         </>
           ) : (
