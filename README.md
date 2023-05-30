@@ -18,8 +18,6 @@ $ # the -L argument limits the depth at which we look into the directory structu
 .
 ├── CONTRIBUTING.md
 ├── LICENSE.md
-├── Pipfile
-├── Pipfile.lock
 ├── README.md
 ├── client
 │   ├── README.md
@@ -106,6 +104,7 @@ Install any dependencies you know you'll need for your project, like SQLAlchemy
 and Alembic, before you begin. You can do this straight from the command line:
 
 ```console
+$ pipenv --python 3.8.13
 $ pipenv install flask flask-sqlalchemy flask-migrate sqlalchemy-serializer flask-restful flask-cors
 ```
 
@@ -233,7 +232,7 @@ Now let's review that last line...
 
 #### CORS
 
-CORS (Cross-Origin Reference Sharing) is a system that uses HTTP headers to
+CORS (Cross-Origin Resource Sharing) is a system that uses HTTP headers to
 determine whether resources from different servers-of-origin can be accessed.
 If you're using the fetch API to connect your frontend to your Flask backend,
 you need to configure CORS on your Flask application instance. Lucky for us,
